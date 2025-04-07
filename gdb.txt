@@ -1,0 +1,127 @@
+Already logging to gdb.txt.
+Breakpoint 1 at 0x115c: file src/main.c, line 7.
+Breakpoint 2 at 0x11e0: file asm/calcular_conversion.asm, line 7.
+All functions matching regular expression "calcular_conversion":
+Starting program: /home/ltrachta/TP1-SdC1/programa_c 76.2
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Debuginfod has been enabled.
+To make this setting permanent, add 'set debuginfod enabled on' to .gdbinit.
+Downloading separate debug info for system-supplied DSO at 0x7ffff7fc3000
+[###                                                                                                                                                                  ][ ###                                                                                                                                                                 ][  ###                                                                                                                                                                ]                                                                                                                                                                         [Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=2, argv=0x7fffffffde98) at src/main.c:7
+7	    if(argc < 2) {
+Stack level 0, frame at 0x7fffffffdd80:
+ rip = 0x55555555515c in main (src/main.c:7); saved rip = 0x7ffff7c2a1ca
+ source language c.
+ Arglist at 0x7fffffffdd70, args: argc=2, argv=0x7fffffffde98
+ Locals at 0x7fffffffdd70, Previous frame's sp is 0x7fffffffdd80
+ Saved registers:
+  rbp at 0x7fffffffdd70, rip at 0x7fffffffdd78
+0x7fffffffdd50:	0x00007fffffffde98	0x00000002f7fe5af0
+0x7fffffffdd60:	0x00007fffffffde50	0x00007fffffffde98
+0x7fffffffdd70:	0x00007fffffffde10	0x00007ffff7c2a1ca
+0x7fffffffdd80:	0x00007fffffffddc0	0x00007fffffffde98
+0x7fffffffdd90:	0x0000000255554040	0x0000555555555149
+0x7fffffffdda0:	0x00007fffffffde98	0xbeef1e2c74e69615
+0x7fffffffddb0:	0x0000000000000002	0x0000000000000000
+0x7fffffffddc0:	0x0000555555557db8	0x00007ffff7ffd000
+0x7fffffffddd0:	0xbeef1e2c73c69615	0xbeef0e568bc49615
+0x7fffffffdde0:	0x00007fff00000000	0x0000000000000000
+Continuing.
+
+Breakpoint 2, calcular_conversion () at asm/calcular_conversion.asm:7
+7	    push rbp
+Stack level 0, frame at 0x7fffffffdd50:
+ rip = 0x5555555551e0 in calcular_conversion (asm/calcular_conversion.asm:7); saved rip = 0x5555555551b3
+ called by frame at 0x7fffffffdd80
+ source language asm.
+ Arglist at 0x7fffffffdd40, args: 
+ Locals at 0x7fffffffdd40, Previous frame's sp is 0x7fffffffdd50
+ Saved registers:
+  rip at 0x7fffffffdd48
+rax            0x4c                76
+rbx            0x7fffffffde98      140737488346776
+rcx            0x30ccc             199884
+rdx            0x0                 0
+rsi            0x40530ccc00000000  4635062511807234048
+rdi            0x4c                76
+rbp            0x7fffffffdd70      0x7fffffffdd70
+rsp            0x7fffffffdd48      0x7fffffffdd48
+r8             0x1                 1
+r9             0x1                 1
+r10            0x7ffff7c4eaba      140737350265530
+r11            0x1                 1
+r12            0x2                 2
+r13            0x0                 0
+r14            0x555555557db8      93824992247224
+r15            0x7ffff7ffd000      140737354125312
+rip            0x5555555551e0      0x5555555551e0 <calcular_conversion>
+eflags         0x246               [ PF ZF IF ]
+cs             0x33                51
+ss             0x2b                43
+ds             0x0                 0
+es             0x0                 0
+fs             0x0                 0
+gs             0x0                 0
+fs_base        0x7ffff7fa1740      140737353750336
+gs_base        0x0                 0
+0x7fffffffdd48:	0x00005555555551b3	0x00007fffffffde98
+0x7fffffffdd58:	0x00000002f7fe5af0	0x00007fffffffde50
+0x7fffffffdd68:	0x00007fff42986666	0x00007fffffffde10
+0x7fffffffdd78:	0x00007ffff7c2a1ca	0x00007fffffffddc0
+0x7fffffffdd88:	0x00007fffffffde98	0x0000000255554040
+0x7fffffffdd98:	0x0000555555555149	0x00007fffffffde98
+0x7fffffffdda8:	0xbeef1e2c74e69615	0x0000000000000002
+0x7fffffffddb8:	0x0000000000000000	0x0000555555557db8
+0x7fffffffddc8:	0x00007ffff7ffd000	0xbeef1e2c73c69615
+0x7fffffffddd8:	0xbeef0e568bc49615	0x00007fff00000000
+8	    mov rbp, rsp
+11	    cvttss2si eax, xmm0
+Stack level 0, frame at 0x7fffffffdd50:
+ rip = 0x5555555551e4 in calcular_conversion (asm/calcular_conversion.asm:11); saved rip = 0x5555555551b3
+ called by frame at 0x7fffffffdd80
+ source language asm.
+ Arglist at 0x7fffffffdd40, args: 
+ Locals at 0x7fffffffdd40, Previous frame's sp is 0x7fffffffdd50
+ Saved registers:
+  rbp at 0x7fffffffdd40, rip at 0x7fffffffdd48
+0x7fffffffdd40:	0x00007fffffffdd70	0x00005555555551b3
+0x7fffffffdd50:	0x00007fffffffde98	0x00000002f7fe5af0
+0x7fffffffdd60:	0x00007fffffffde50	0x00007fff42986666
+0x7fffffffdd70:	0x00007fffffffde10	0x00007ffff7c2a1ca
+0x7fffffffdd80:	0x00007fffffffddc0	0x00007fffffffde98
+0x7fffffffdd90:	0x0000000255554040	0x0000555555555149
+0x7fffffffdda0:	0x00007fffffffde98	0xbeef1e2c74e69615
+0x7fffffffddb0:	0x0000000000000002	0x0000000000000000
+0x7fffffffddc0:	0x0000555555557db8	0x00007ffff7ffd000
+0x7fffffffddd0:	0xbeef1e2c73c69615	0xbeef0e568bc49615
+13	    add eax, 1
+Stack level 0, frame at 0x7fffffffdd50:
+ rip = 0x5555555551e8 in calcular_conversion (asm/calcular_conversion.asm:13); saved rip = 0x5555555551b3
+ called by frame at 0x7fffffffdd80
+ source language asm.
+ Arglist at 0x7fffffffdd40, args: 
+ Locals at 0x7fffffffdd40, Previous frame's sp is 0x7fffffffdd50
+ Saved registers:
+  rbp at 0x7fffffffdd40, rip at 0x7fffffffdd48
+0x7fffffffdd40:	0x00007fffffffdd70	0x00005555555551b3
+0x7fffffffdd50:	0x00007fffffffde98	0x00000002f7fe5af0
+0x7fffffffdd60:	0x00007fffffffde50	0x00007fff42986666
+0x7fffffffdd70:	0x00007fffffffde10	0x00007ffff7c2a1ca
+0x7fffffffdd80:	0x00007fffffffddc0	0x00007fffffffde98
+0x7fffffffdd90:	0x0000000255554040	0x0000555555555149
+0x7fffffffdda0:	0x00007fffffffde98	0xbeef1e2c74e69615
+0x7fffffffddb0:	0x0000000000000002	0x0000000000000000
+0x7fffffffddc0:	0x0000555555557db8	0x00007ffff7ffd000
+0x7fffffffddd0:	0xbeef1e2c73c69615	0xbeef0e568bc49615
+Continuing.
+[Inferior 1 (process 112632) exited normally]
+No stack.
+No registers.
+Warning: 'set logging off', an alias for the command 'set logging enabled', is deprecated.
+Use 'set logging enabled off'.
+
