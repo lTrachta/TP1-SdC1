@@ -19,5 +19,5 @@ if __name__ == "__main__":
     print("Índice GINI obtenido:", valor_gini)
 
     # Ejecutar el programa en C y pasarle el valor como argumento
-    result = subprocess.run(["../src/programa_c", str(valor_gini)], capture_output=True, text=True)
+    result = subprocess.run(["../programa_c", str(valor_gini)], capture_output=True, text=True)
     print("Resultado de conversión:", result.stdout)
