@@ -1,11 +1,20 @@
+; calcular_conversion.asm
+; Para x86-64 con convención System V (Linux)
 global calcular_conversion
 section .text
-; Se asume que el primer parámetro está en rdi (en Linux x86-64 cdecl moderno)
 calcular_conversion:
+    ; Prologo (opcional para una función simple)
     push rbp
     mov rbp, rsp
-    ; Convertir: asume que el parámetro ya es entero en edi
-    mov eax, edi     ; mover parámetro a eax
-    add eax, 1       ; sumar 1
+
+    ; Convertir float (en xmm0) a entero con truncamiento
+    cvttss2si eax, xmm0
+    ; Sumar 1 al valor entero
+    add eax, 1
+
+    ; Epilogo
     pop rbp
     ret
+
+section .note.GNU-stack
+
